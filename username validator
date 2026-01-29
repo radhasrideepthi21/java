@@ -1,0 +1,33 @@
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+class UsernameValidator {
+    /*
+     * Regular expression to validate usernames:
+     * - First character must be a letter
+     * - Only letters, digits, or underscore allowed
+     * - Total length between 8 and 30 characters
+     */
+    public static final String regularExpression = "^[a-zA-Z][a-zA-Z0-9_]{7,29}$";
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.nextLine(); // consume newline
+
+        Pattern pattern = Pattern.compile(UsernameValidator.regularExpression);
+
+        for (int i = 0; i < n; i++) {
+            String username = sc.nextLine();
+            if (pattern.matcher(username).matches()) {
+                System.out.println("Valid");
+            } else {
+                System.out.println("Invalid");
+            }
+        }
+
+        sc.close();
+    }
+}
