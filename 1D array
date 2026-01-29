@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read size of array
+        int n = sc.nextInt();
+
+        // Create an array capable of holding n integers
+        int[] arr = new int[n];
+
+        // Read n integers and store in array
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        sc.close();
+
+        // The locked code in HackerRank will print the array elements
+        // so we don't need to print them here
+    }
+}
