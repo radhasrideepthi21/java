@@ -1,0 +1,26 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read two huge numbers as strings
+        String aStr = sc.nextLine();
+        String bStr = sc.nextLine();
+        sc.close();
+
+        // Convert strings to BigInteger
+        BigInteger a = new BigInteger(aStr);
+        BigInteger b = new BigInteger(bStr);
+
+        // Sum
+        BigInteger sum = a.add(b);
+        // Product
+        BigInteger product = a.multiply(b);
+
+        // Print results
+        System.out.println(sum);
+        System.out.println(product);
+    }
+}
